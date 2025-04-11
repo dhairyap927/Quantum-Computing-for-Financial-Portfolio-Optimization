@@ -1,34 +1,3 @@
-# 🧮 Portfolio Optimization using Classical and Quantum Methods
-
-This project demonstrates how to solve the portfolio optimization problem using both **classical simulation** and **quantum algorithms (QAOA)**. It explores the **Efficient Frontier**, calculates the **Sharpe Ratio**, and introduces **Qiskit’s quantum optimization tools** for future-ready portfolio selection.
-
----
-
-## 📌 Project Structure
-
-### 1. **Classical Portfolio Optimization**
-- Fetches historical stock data using `yfinance`.
-- Calculates:
-  - Daily returns
-  - Mean returns
-  - Covariance matrix
-- Simulates **10,000 random portfolios**.
-- Evaluates each portfolio using:
-  - Expected annual return
-  - Annual volatility (risk)
-  - Sharpe Ratio (risk-adjusted return)
-- Visualizes the **Efficient Frontier** and highlights the optimal portfolio.
-
-### 2. **Quantum Optimization with QAOA**
-- Converts the mean-variance optimization problem into a **Quadratic Unconstrained Binary Optimization (QUBO)** form.
-- Uses Qiskit’s `PortfolioOptimization` tool to create the quantum-compatible problem.
-- Solves using:
-  - `QAOA` (Quantum Approximate Optimization Algorithm)
-  - Classical optimizer (`COBYLA`)
-  - Qiskit `Sampler` (simulator backend)
-- Outputs an optimized binary vector that indicates which stocks to include in the portfolio.
-
----
 
 ## 🛠️ Technologies Used
 
