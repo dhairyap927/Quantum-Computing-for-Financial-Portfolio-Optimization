@@ -43,34 +43,57 @@ This project demonstrates how to solve the portfolio optimization problem using 
 
 ---
 
+## ▶️ How to Run the Project
+
+### 1. 📦 Install Dependencies (with Version Control)
+It is important to install **compatible versions** of Qiskit and other libraries to avoid dependency conflicts:
+
+```
+!pip install yfinance pandas numpy matplotlib
+!pip -q install qiskit==1.3.1 qiskit-aer qiskit-algorithms qiskit-ibm-runtime pylatexenc
+!pip install qiskit-optimization
+!pip install qiskit-algorithms
+!pip install qiskit-finance --quiet
+```
+
+> ✅ These versions are tested and compatible with this notebook setup.
+
+---
+
+### 2. 🚀 Execute the Notebook
+
+You can run this notebook locally with **Jupyter Notebook** or use **Google Colab** for an online execution:
+
+```bash
+jupyter notebook Portfolio_Optimization.ipynb
+```
+
+Or open directly in Colab:
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/)
+
+---
+
+### 3. 🔌 Optional: Run on Real Quantum Hardware
+
+- Create an IBM Quantum account at [https://quantum.ibm.com](https://quantum.ibm.com)
+- Replace simulator sampler with `QiskitRuntimeService` and set your IBM API token.
+- Update backend name (e.g., `"ibm_brisbane"`) in the code.
+
+---
+
 ## 📈 Results
 
-- The classical approach provides a full **Efficient Frontier** with thousands of portfolios.
-- The optimal classical portfolio is selected using the **maximum Sharpe Ratio**.
-- The quantum solution uses QAOA to select a **combinatorially optimal subset of assets**, subject to risk-return constraints.
+- Classical optimization highlights the optimal Sharpe Ratio on the Efficient Frontier.
+- Quantum optimization returns a binary selection of assets using QAOA and QUBO formulation.
 
 ---
 
 ## 📸 Visuals
 
-- Efficient Frontier Plot with Sharpe-colored portfolios
-- Optimal Portfolio highlighted with a red star
-- Optional QAOA circuit diagram showing the quantum logic used
-
----
-
-## 🧠 How to Run
-
-1. Install dependencies:
-   ```bash
-   pip install yfinance pandas numpy matplotlib qiskit qiskit-finance qiskit-optimization
-   ```
-
-2. Run the notebook step-by-step in [Google Colab](https://colab.research.google.com/) or Jupyter.
-
-3. To try real quantum backends:
-   - Set up an IBM Quantum account.
-   - Use `QiskitRuntimeService` with your API token.
+- Efficient Frontier Plot
+- Optimal Portfolio Marker
+- QAOA Circuit Diagram (Optional)
 
 ---
 
